@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My fisrt angular';
+  title:string = 'My fisrt angular';
+  imageUrl:string = "https://www.w3schools.com/html/pic_mountain.jpg";
+  isValid:boolean = false;
+
+  onClickMe($event: any){
+    this.isValid=!this.isValid;
+  }
 }

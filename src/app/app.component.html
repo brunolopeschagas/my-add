@@ -1,2 +1,5 @@
 <h1>{{title}}</h1>
-<app-products></app-products>
+<!-- <app-products></app-products> -->
+<!-- <img src="{{imageUrl}}"> -->
+<button  (click)="onClickMe($event)">Toogle Submit</button>
+<button class="btn btn-primary" [class.disabled]="!isValid">Submit</button>
