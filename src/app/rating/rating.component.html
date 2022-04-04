@@ -1,6 +1,6 @@
 <ng-container *ngIf="rating < 1; else elseBlock">
-    <i class="bi bi-star"></i>
+    <i (click)="onClick(1)" class="bi bi-star"></i>
 </ng-container>
 <ng-template #elseBlock>
-    <i class="bi bi-star-fill"></i>
+    <i (click)="onClick(0)" class="bi bi-star-fill"></i>
 </ng-template>
