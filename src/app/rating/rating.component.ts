@@ -3,7 +3,7 @@ import { Component, OnInit, Input} from '@angular/core';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
-  styleUrls: ['./rating.component.css']
+  styles:['label { font-weight: bold; color: red;}']
 })
 export class RatingComponent implements OnInit {
 
