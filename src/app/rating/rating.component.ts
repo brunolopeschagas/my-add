@@ -3,12 +3,12 @@ import { Component, OnInit, Input} from '@angular/core';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
-  styles:['label { font-weight: bold; color: red;}']
+  styleUrls: ['./rating.component.css']
 })
 export class RatingComponent implements OnInit {
 
   @Input() rating: number = 0;
-
+  
   onClick(ratingValue:number){
     this.rating = ratingValue;
   }
