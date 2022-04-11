@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { ProdutcService } from './products/product.service';
 import { RatingComponent } from './rating/rating.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    RatingComponent
+    RatingComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule
