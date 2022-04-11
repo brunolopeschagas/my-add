@@ -11,9 +11,10 @@ export class ProductComponent implements OnInit {
   @Input() data:Product = {
     imageUrl:"",
     productName:"",
-    releaseDate:"",
-    numOfReviews:0,
-    description:""
+    releasedDate:"",
+    num0fReviews:0,
+    description:"",
+    rating:0
   }
   
   constructor() { }
