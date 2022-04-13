@@ -8,15 +8,15 @@ import Product from '../product';
 })
 export class ProductComponent implements OnInit {
 
-  @Input() data:Product = {
-    imageUrl:"",
-    productName:"",
-    releasedDate:"",
-    num0fReviews:0,
-    description:"",
-    rating:0
+  @Input() productData: Product = {
+    imageUrl: "",
+    productName: "",
+    releasedDate: "",
+    num0fReviews: 0,
+    description: "",
+    rating: 0
   }
-  
+
   constructor() { }
 
   ngOnInit(): void {
