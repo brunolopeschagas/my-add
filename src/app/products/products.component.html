@@ -1,11 +1,13 @@
 <h2>Products</h2>
-<div *ngIf="products.length > 0">
+<div *ngIf="products.length > 0; else loading">
     <ul>
         <li *ngFor="let product of products">
             <app-product [productData]="product"></app-product>
         </li>
     </ul>
 </div>
-<div *ngIf="products.length == 0">
-    Sem produtos
-</div>
+<ng-template #loading>
+    <div>
+        Sem produtos
+    </div>
+</ng-template>
