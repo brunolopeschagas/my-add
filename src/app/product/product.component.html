@@ -15,7 +15,7 @@
           <div *ngSwitchCase="5">Excelente</div>
         </div>
         <p class="card-text">Reviews: {{productData.num0fReviews}}</p>
-        <p class="card-text">{{productData.description}}</p>
+        <p class="card-text">{{productData.description|truncate:10}}</p>
         <p class="card-text"><small class="text-muted">{{productData.releasedDate|date:"dd/MM/yyyy"}}</small></p>
       </div>
     </div>

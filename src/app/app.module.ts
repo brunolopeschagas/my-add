@@ -6,13 +6,15 @@ import { ProductsComponent } from './products/products.component';
 import { ProdutcService } from './products/product.service';
 import { RatingComponent } from './rating/rating.component';
 import { ProductComponent } from './product/product.component';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     RatingComponent,
-    ProductComponent
+    ProductComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule
