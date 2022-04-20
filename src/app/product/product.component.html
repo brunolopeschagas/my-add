@@ -7,6 +7,13 @@
       <div class="card-body">
         <h5 class="card-title">{{productData.productName}}</h5>
         <app-rating [rating]="productData.rating"></app-rating>
+        <div [ngSwitch]="productData.rating">
+          <div *ngSwitchCase="1">Ruim</div>
+          <div *ngSwitchCase="2">Regular</div>
+          <div *ngSwitchCase="3">Bom</div>
+          <div *ngSwitchCase="4">Muito Bom</div>
+          <div *ngSwitchCase="5">Excelente</div>
+        </div>
         <p class="card-text">Reviews: {{productData.num0fReviews}}</p>
         <p class="card-text">{{productData.description}}</p>
         <p class="card-text"><small class="text-muted">{{productData.releasedDate}}</small></p>
