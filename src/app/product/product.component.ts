@@ -11,7 +11,7 @@ export class ProductComponent implements OnInit {
   @Input() productData: Product = {
     imageUrl: "",
     productName: "",
-    releasedDate: "",
+    releasedDate: new Date(1900,0,1),
     num0fReviews: 0,
     description: "",
     rating: 0
