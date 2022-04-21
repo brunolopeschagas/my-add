@@ -7,6 +7,8 @@ import { ProdutcService } from './products/product.service';
 import { RatingComponent } from './rating/rating.component';
 import { ProductComponent } from './product/product.component';
 import { TruncatePipe } from './truncate.pipe';
+import { FormsModule } from '@angular/forms';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,11 @@ import { TruncatePipe } from './truncate.pipe';
     ProductsComponent,
     RatingComponent,
     ProductComponent,
-    TruncatePipe
+    TruncatePipe,
+    UserFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [ProdutcService],
   bootstrap: [AppComponent]
