@@ -27,3 +27,10 @@
         </div>
     </form>
 </div>
+<div class="container" [hidden]="!submitted">
+    You submited the following:
+    Nome: {{model.firstName}}
+    Email: {{model.email}}
+    Country: {{model.country}}
+    <button class="btn btn-secondary" (click)="submitted=false">Remove</button>
+</div>
