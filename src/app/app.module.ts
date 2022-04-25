@@ -9,6 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { TruncatePipe } from './truncate.pipe';
 import { FormsModule } from '@angular/forms';
 import { UserFormComponent } from './user-form/user-form.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UserFormComponent } from './user-form/user-form.component';
     RatingComponent,
     ProductComponent,
     TruncatePipe,
-    UserFormComponent
+    UserFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule, FormsModule
