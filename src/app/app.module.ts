@@ -7,7 +7,7 @@ import { ProdutcService } from './products/product.service';
 import { RatingComponent } from './rating/rating.component';
 import { ProductComponent } from './product/product.component';
 import { TruncatePipe } from './truncate.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserFormComponent } from './user-form/user-form.component';
 import { LoginComponent } from './login/login.component';
 
@@ -22,7 +22,7 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [ProdutcService],
   bootstrap: [AppComponent]
