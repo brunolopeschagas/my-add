@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,14 +8,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  form = new FormGroup(
-    {
-      username:new FormControl('',Validators.required),
-      password:new FormControl('',Validators.required)
-    }
-  );
+  form:FormGroup;
 
-  constructor() { }
+  constructor(fb:FormBuilder) { 
+    this.form = fb.group({
+      username:['',Validators.required],
+      password:['',Validators.required],
+    });
+  }
 
     login(){
       alert("logado: " + this.form.value.username);
