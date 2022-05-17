@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from '../login.service';
+import { PasswordValidator } from '../passwordValidator';
 
 @Component({
   selector: 'app-login',
@@ -8,18 +10,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  form:FormGroup;
+  form: FormGroup;
 
-  constructor(fb:FormBuilder) { 
+  constructor(fb: FormBuilder, private _loginService: LoginService) {
     this.form = fb.group({
-      username:['',Validators.required],
-      password:['',Validators.required],
+      username: ['', Validators.required],
+      password: ['', Validators.compose([Validators.required, PasswordValidator.cannotContainSpace])],
     });
   }
 
-    login(){
-      alert("logado: " + this.form.value.username);
+  login() {
+    var result = this._loginService.login(this.form.controls['username'].value, this.form.controls['password'].value);
+    if (!result) {
+      this.form.controls['password'].setErrors(
+        {
+          invalidLogin: true
+        }
+      );
+    }else{
+      alert("logado");
     }
+  }
 
   ngOnInit(): void {
   }

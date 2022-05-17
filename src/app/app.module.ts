@@ -10,6 +10,7 @@ import { TruncatePipe } from './truncate.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserFormComponent } from './user-form/user-form.component';
 import { LoginComponent } from './login/login.component';
+import { LoginService } from './login.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule
   ],
-  providers: [ProdutcService],
+  providers: [ProdutcService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

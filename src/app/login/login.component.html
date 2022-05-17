@@ -9,7 +9,9 @@
             <label for="password">Password</label>
             <input type="password" id="password" class="form-control" formControlName="password">
         </div>
-        <div *ngIf="form.controls['password'].touched && form.controls['password'].invalid" class="alert alert-danger"> Password Required</div>
+        <div *ngIf="form.controls['password'].touched && form.controls['password'].errors">
+            <div *ngIf="form.controls['password'].errors['invalidLogin']" class="alert alert-danger"> User or password invalid</div>
+        </div>
         <button class="btn btn-primary" type="submit">Login</button>
     </form>
 </div>
