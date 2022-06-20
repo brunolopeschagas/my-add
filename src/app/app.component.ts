@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = 'My fisrt angular';
-  imageUrl:string = "https://www.w3schools.com/html/pic_mountain.jpg";
-  isValid:boolean = false;
 
-  onClickMe($event: any){
-    this.isValid=!this.isValid;
+  searchControl = new FormControl();
+
+  constructor(){
+    this.searchControl.valueChanges
+    .pipe(filter(text=> text.length > 3))
+    .subscribe(value=>{console.log(value)});
   }
 }
