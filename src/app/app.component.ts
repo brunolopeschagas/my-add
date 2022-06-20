@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { debounceTime, filter } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,8 @@ export class AppComponent {
     this.searchControl.valueChanges
     .pipe(
       filter(text=> text.length > 3),
-      debounceTime(400)
+      debounceTime(400),
+      distinctUntilChanged()
     )
     .subscribe(value=>{console.log(value)});
   }
