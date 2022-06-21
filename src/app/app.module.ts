@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserFormComponent } from './user-form/user-form.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login.service';
+import { GitHubDataComponent } from './git-hub-data/git-hub-data.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,11 @@ import { LoginService } from './login.service';
     ProductComponent,
     TruncatePipe,
     UserFormComponent,
-    LoginComponent
+    LoginComponent,
+    GitHubDataComponent
   ],
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [ProdutcService, LoginService],
   bootstrap: [AppComponent]
