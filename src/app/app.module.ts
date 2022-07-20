@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginService } from './login.service';
 import { GitHubDataComponent } from './git-hub-data/git-hub-data.component';
 import {HttpClientModule} from '@angular/common/http';
+import { GitHubService } from './git-hub-data/github.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
-  providers: [ProdutcService, LoginService],
+  providers: [ProdutcService, LoginService, GitHubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

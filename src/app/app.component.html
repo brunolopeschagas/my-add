@@ -1,1 +1,21 @@
 <app-git-hub-data></app-git-hub-data>
+<div class="container">
+    <h3>github users</h3>
+    <div *ngFor="let user of users" class="media">
+        <div class="card mb-3" style="max-width:540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{user.avatar_url}}" class="img-fluid rounded-start" width="128" height="128"> 
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <a href="{{user.html_url}}"> 
+                        <h5 class="card-title">{{user.login}}</h5>
+                        </a>
+                        <p class="card-text">Score: {{user.score}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
