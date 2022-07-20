@@ -1,6 +1,6 @@
-<app-git-hub-data></app-git-hub-data>
 <div class="container">
     <h3>github users</h3>
+    <input type="search" class="form-control" [formControl]="searchControl">
     <div *ngFor="let user of users" class="media">
         <div class="card mb-3" style="max-width:540px;">
             <div class="row g-0">
